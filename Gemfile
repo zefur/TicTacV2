@@ -73,3 +73,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
+# Dev choice 
+gem 'devise'
+gem 'view_component'
+gem 'pry-byebug'
