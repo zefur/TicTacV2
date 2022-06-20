@@ -2,7 +2,8 @@
 
 class UnitComponent < ViewComponent::Base
 
-def initialize
+def initialize(attributes = {})
+    @game_id = attributes[:game_id]
 
 end
 
