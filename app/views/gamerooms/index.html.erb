@@ -1,6 +1,16 @@
+<p> Game Rooms</p>
+<div class=" w-full grid grid-cols-3 ">
+ <% @gamerooms.each do |gameroom| %>
+ 
+ <div class= " bg-gray-200 col-span-1  ">
+   <p>
+     <%= gameroom.player.email %>
+  </p>
+  <p>
+     <%= link_to "Join game room", gameroom_path(gameroom) %> 
+     
+  </p>
+</div>
 
-<div class="flex w-full h-full grid-cols-3">
-<%= render(BoardComponent.new(gameroom: @gameroom)) %>
-
-
+<% end %>
 </div>

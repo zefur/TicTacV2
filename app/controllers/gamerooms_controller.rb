@@ -17,6 +17,7 @@ class GameroomsController < ApplicationController
         @gameroom = Gameroom.new(gameroom_params)
        
         if @gameroom.save
+            @board = Board.create(gameroom_id: @gameroom.id)
             redirect_to gameroom_path(@gameroom)
         end
     end
