@@ -74,8 +74,9 @@ group :test do
   gem "webdrivers"
 end
 
-
-# Dev choice 
-gem 'devise'
-gem 'view_component'
-gem 'pry-byebug'
+# Dev choice
+gem "devise"
+gem "view_component"
+gem "pry-byebug"
+gem "stimulus_reflex", "= 3.5.0.pre8"
+gem "view_component_reflex"

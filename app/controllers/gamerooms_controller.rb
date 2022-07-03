@@ -6,6 +6,7 @@ class GameroomsController < ApplicationController
 
     def show
         @gameroom = Gameroom.find(params[:id])
+        
     end
 
     def new

@@ -1,5 +1,5 @@
 <p> Game Rooms</p>
-<div class=" w-full grid grid-cols-3 ">
+<div class=" w-screen grid grid-cols-3 ">
  <% @gamerooms.each do |gameroom| %>
  
  <div class= " bg-gray-200 col-span-1  ">
@@ -14,3 +14,5 @@
 
 <% end %>
 </div>
+
+<%= render(BoardComponent.new) %>
