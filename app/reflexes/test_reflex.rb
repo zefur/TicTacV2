@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class TestReflex < ApplicationReflex
+  delegate :current_player, to: :connection
   # Add Reflex methods in this file.
   #
   # All Reflex instances include CableReady::Broadcaster and expose the following properties:

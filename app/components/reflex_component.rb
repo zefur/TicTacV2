@@ -10,7 +10,9 @@ class ReflexComponent < ViewComponentReflex::Component
     end
 
     def test
+     stream_to ChatChannel
         @count +=  1 
+        # puts ChatChannel(Gameroom.find(@game_id))
     end
 
     def collection_key

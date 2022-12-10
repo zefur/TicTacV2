@@ -13,3 +13,4 @@ eagerLoadControllersFrom("controllers", application);
 // lazyLoadControllersFrom("controllers", application)
 const consumer = await cable.getConsumer();
 StimulusReflex.initialize(application, { consumer, debug: true });
+application.consumer = consumer;
