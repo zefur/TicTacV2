@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_20_042739) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_03_082157) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,6 +29,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_20_042739) do
     t.index ["player_id"], name: "index_gamerooms_on_player_id"
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "player_id", null: false
+    t.bigint "gameroom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["gameroom_id"], name: "index_messages_on_gameroom_id"
+    t.index ["player_id"], name: "index_messages_on_player_id"
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -43,4 +53,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_20_042739) do
 
   add_foreign_key "boards", "gamerooms"
   add_foreign_key "gamerooms", "players"
+  add_foreign_key "messages", "gamerooms"
+  add_foreign_key "messages", "players"
 end

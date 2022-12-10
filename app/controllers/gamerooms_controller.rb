@@ -1,11 +1,12 @@
 class GameroomsController < ApplicationController
-    before_action :set_player
+    # before_action :set_player
     def index
         @gamerooms = Gameroom.all
     end
 
     def show
         @gameroom = Gameroom.find(params[:id])
+        @player
     end
 
     def new

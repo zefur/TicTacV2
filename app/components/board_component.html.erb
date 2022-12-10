@@ -1,7 +1,7 @@
-<div class="grid grid-cols-3  items-center justify-center">
-<% 9.times do %>
+<div class=" grid grid-cols-3 place-content-center justify-center">
+<% (1..9).each do |v| %>
 
-<%= render(UnitComponent.new) %>
+<%= render(UnitComponent.new(game_id: v)) %>
 
 <% end %>
 
