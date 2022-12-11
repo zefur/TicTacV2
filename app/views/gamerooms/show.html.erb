@@ -1,11 +1,12 @@
 
 <% current_player = Player.find(3) %>
 <div class=" w-full h-full flex justify-center items-center">
-<%= render(BoardComponent.new(board: @board)) %>
+<%= render(BoardComponent.new(board: @gameroom.board)) %>
 
-
+    
 </div>
     <div  data-controller="chat" data-chat-id-value ="<%= @gameroom.id %>" id= "<%= dom_id(@gameroom) %>">
 
 <%= render(ChatboxComponent.new(gameroom: @gameroom, player: current_player)) %>
 </div>
+

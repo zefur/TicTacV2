@@ -3,8 +3,8 @@ class RoomChannel < ApplicationCable::Channel
     # stream_from "some_channel"
     puts params
     stream_for Gameroom.find(params[:id])
-    puts "james"
-    puts "connected"
+    puts 'james'
+    puts 'connected'
   end
 
   def unsubscribed

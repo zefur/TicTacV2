@@ -1,13 +1,7 @@
- <body>
-  
-  <h1> 
-  </h1>
-  <div>
-  </div>
-  <main>
-    <div class="text-center justify-center items-center fixed content-center block m-auto w-screen">
+ 
+    <div class="text-center bg-green-100 justify-center items-center  content-center block m-auto w-screen h-screen">
      
-      <h1 class="text-center text-2xl">
+      <h1 class="text-center text-2xl bg-blue-200">
         Hi welcome to UltimateTicTac
       </h1>
       <p>I hope you don't mind but we've given you a username for this sessions from now on you will be known as </p>
@@ -17,12 +11,11 @@
         </div>
         
           <div class= "my-6">
-            <%= link_to "start match", class: "py-2 px-4  bg-blue-700 hover:bg-blue-800 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg" %>   <%= link_to "Game rooms", class: "py-2 px-4  bg-blue-700 hover:bg-blue-800 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg " %>
+            <%= link_to "start match", new_gameroom_path, class: "py-2 px-4  bg-blue-700 hover:bg-blue-800 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg" %>   <%= link_to "Game rooms", gamerooms_path, class: "py-2 px-4  bg-blue-700 hover:bg-blue-800 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg " %>
           </div>
         
       </div>
     </div>
-  </main>
-</body>
+  
 
 

@@ -2,7 +2,7 @@
 
 <% (1..9).each do |v| %>
 
-<%= render(ReflexComponent.new(cell_id: v, game_id: @game_id)) %>
+<%= render(ReflexComponent.new(cell_id: v, game_id: @game_id, board: @board)) %>
 
 <% end %>
 </div>

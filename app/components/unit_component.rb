@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
 class UnitComponent < ViewComponent::Base
-
-def initialize(attributes = {})
+  def initialize(attributes = {})
     @game_id = attributes[:game_id]
-
-end
-
+    @board= attributes[:board]
+  end
 end

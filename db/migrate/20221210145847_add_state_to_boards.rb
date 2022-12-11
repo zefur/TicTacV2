@@ -1,6 +1,6 @@
-class AddRoomNameToGamerooms < ActiveRecord::Migration[7.0]
+class AddStateToBoards < ActiveRecord::Migration[7.0]
   def change
-    add_column :gamerooms, :room_name, :string
+    add_column :boards, :state, :json
     # Ex:- add_column("admin_users", "username", :string, :limit =>25, :after => "email")
   end
 end

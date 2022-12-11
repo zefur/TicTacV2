@@ -33,13 +33,10 @@ class TestReflex < ApplicationReflex
   #   end
   #
   # Learn more at: https://docs.stimulusreflex.com/rtfm/reflex-classes
- 
 
   def increment
     @count = element.dataset[:count].to_i + element.dataset[:step].to_i
     @message = 'hello'
-   
-    
   end
 end
 

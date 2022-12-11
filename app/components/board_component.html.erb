@@ -1,9 +1,11 @@
 <div class=" grid grid-cols-3 place-content-center justify-center">
 <% (1..9).each do |v| %>
 
-<%= render(UnitComponent.new(game_id: v)) %>
+<%= render(UnitComponent.new(game_id: v, board: @board)) %>
 
 <% end %>
-
+<div>
+<%= @board.state %>
+</div>
 
 </div>

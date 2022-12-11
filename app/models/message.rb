@@ -1,5 +1,5 @@
 class Message < ApplicationRecord
-  include CableReady::Broadcaster 
+  include CableReady::Broadcaster
   belongs_to :player
   belongs_to :gameroom
 
@@ -9,6 +9,4 @@ class Message < ApplicationRecord
   #   cable_ready[ChatChannel].console_log("test test")
 
   # end
-
-  
 end
