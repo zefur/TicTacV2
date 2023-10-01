@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@stimulus_reflex/polyfills": "^3.4.0",
     "stimulus_reflex": "3.5.0-pre8"
   }
 }

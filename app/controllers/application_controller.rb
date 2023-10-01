@@ -1,3 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_player
+  include CableReady::Broadcaster 
+   helper_method :current_player
+
 end

@@ -1,9 +1,11 @@
 
 <%= component_controller do %>
-<div  class=" border-solid border-2 border-black w-16 h-16 rounded-lg items-cen/gamerooms/3ter  bg-gray-200 text-center"  >  
+<div  class=" border-solid border-2 border-black w-16 h-16 rounded-lg items-center <%= @shade %>  text-center" data-key=<%= key %> >  
 <%= reflex_tag :test, :button, "hello", "data-key" => key %>
-<%= @count %>
+<%= @game_id %>
 <%= @value %>
+<%= @count %>
+
 </div>
 
 

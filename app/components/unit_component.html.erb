@@ -1,8 +1,10 @@
-<div  class="grid grid-cols-3  place-content-center  w-full h-full">
+
+<div  id="<%= @game_id %>" class="grid grid-cols-3  place-content-center ring-green-400 <%= @colour %> w-full h-full  <%= @board.cell_active["unit_#{@game_id}"] ? "pointer-events-auto ring-4" : "pointer-events-none" %>" >
 
 <% (1..9).each do |v| %>
+<%= render(CellComponent.new(cell_id: v, game_id: @game_id, board: @board, parent: key)) %>
 
-<%= render(ReflexComponent.new(cell_id: v, game_id: @game_id, board: @board)) %>
+
 
 <% end %>
-</div>
+</div>  

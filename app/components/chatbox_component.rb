@@ -2,13 +2,14 @@
 
 class ChatboxComponent < ViewComponentReflex::Component
   include CableReady::Broadcaster
+  
   def initialize(attr = {})
     @room = attr[:gameroom]
     @player = attr[:player]
   end
 
   def post
-    stream_to('ChatChannel')
+    
 
     puts 'hello'
     chat = Message.new
@@ -17,13 +18,15 @@ class ChatboxComponent < ViewComponentReflex::Component
     chat.gameroom_id = @room.id
     chat.save
 
-    # puts controller
-
+    puts "1"
     # Message.create(content: element.value, player_id: Player.last.id, gameroom_id: @room.id )
-    # cable_ready[ChatChannel].insert_adjacent_html(
-    #        selector: '#chat-area',
-    #        html: render(MessageComponent.new( message: chat, player: @player))
-    #      )
+    puts "2"
+    cable_ready[ChatChannel].morph(
+           selector: '#chatbox',
+           children_only: false
+          
+    ).broadcast
+         puts "3"
     # refresh!
   end
 

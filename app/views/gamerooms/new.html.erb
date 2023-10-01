@@ -1,6 +1,8 @@
 <%= form_for @gameroom do |f| %>
   <%= f.label "Game Room Name" %>
   <%= f.text_field :room_name, value: "#{current_player.email}'s room" %>
+   <%= f.select :mode, value: ["original"] %>
+   
   <%= f.hidden_field :player_id, value: current_player.id %>
   <%= f.submit "Submit", disable_with: "Submiting..." %>
 <% end %>
