@@ -9,23 +9,23 @@ module UltimateTicTac
             @mode = attr[:mode]
             @board =attr[:board]
             @value = true
-            @moves = Moves.new
+            @moves = Moves.new(@mode)
         end
 
         # current_player = @value? @noughts : @crosses
         def start
-            @game_state.begin
+            @game_state.begin #yes
         end
 
         def play
-            @moves.check_move
+            @moves.check_move #doing
         end
         def won?
-            @game_state.check_unit
+            @game_state.check_unit #no need maybe
         end
 
         def finished?
-            @game_state.game_won
+            @game_state.game_won #need to do
         end
 
 

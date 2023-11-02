@@ -42,8 +42,9 @@ module UltimateTicTac
         end
         
 
-        def next_area(move)
-            move
+        def next_area(game ,cell)
+            @games[game.to_s][active].toggle!
+            @games[game.to_s][active].toggle!
         end
 
     end
